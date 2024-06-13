@@ -39,6 +39,3 @@ jobs:
           export VERSION=${{ inputs.version }}
           envsubst < $MANIFEST > manifest.yaml
           cat manifest.yaml
-
-    - run: kubectl delete -f manifest.yaml --wait
-      if: always()
